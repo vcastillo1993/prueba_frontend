@@ -1,0 +1,15 @@
+.card{
+  display:flex;
+  align-content: center;
+  flex-direction:row;
+  margin-top: 20px;
+
+}
+
+.card div{
+  margin-top: 20px;
+}
+
+.card div button{
+  font-family: 'Architects Daughter', cursive;
+}

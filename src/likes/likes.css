@@ -1,0 +1,30 @@
+.likes {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  margin-top: 25px;;
+}
+.likes h1 {
+  font-family: 'Architects Daughter', cursive;
+  font-size:25px;  
+}
+
+.thowcomponent{
+  display:flex;
+  width:25%;
+  justify-content: space-between;
+  flex-direction: row;
+  text-align: center;
+}
+
+.fas {
+  font-size: 50px;
+  cursor: pointer
+}
+
+.fab {
+  font-size: 50px;
+  cursor: pointer
+}
