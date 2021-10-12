@@ -1,8 +1,12 @@
 .App {
   display: flex;
+  height: 100vh;
   align-content: center;
   align-items: center;
-  flex-direction: column
+  flex-direction: column;
+  
+  background-image: url("https://www.freepnglogos.com/uploads/rick-and-morty-png/rick-and-morty-portal-shoes-white-clothing-zavvi-23.png");
+  background-size: 100% 100%;
 }
 
 .contentpages {
@@ -11,4 +15,37 @@
   align-content: center ;
   text-align:center;
   width: 100%;
+}
+
+.progress-bar {
+  /* background-color: white; */
+  border: 1px solid gray;
+  width: 75%;
+  height: 40px;
+  border-radius: 7px;
+  text-align: center;
+  background-color: rgba(120, 160, 127, 0.535);
+}
+
+.progress-bar .progress {
+  display: flex;
+  height: 40px;
+  border-radius: 7px 7px 7px 7px;
+  background-color: rgba(41, 155, 60, 0.535);
+  align-items: center;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 20px;
+  
+}
+.contentpages div{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.contentpages button{
+  cursor: pointer;
+  font-family: 'Architects Daughter', cursive;
+  background-color: rgba(255,255,255,0.535);
+  border: 0px;
+  font-size: 20px;
 }

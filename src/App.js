@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import ContentHistory from './contentHistoris/ContentHistory';
-import Historias from './historias/Historias';
-import Header from './header/Header';
-import Likes from './likes/Likes';
+import ContentHistory from './components/contentHistoris/ContentHistory';
+import Historias from './components/historias/Historias';
+import Header from './components/header/Header';
+import Likes from './components/likes/Likes';
 /* import Pages from './pages/Pages'; */
 
 function App() {
@@ -42,6 +42,8 @@ function App() {
     localStorage.setItem('savedScenes', JSON.stringify(scenesToSave))
   }
 
+
+
   return (
     <div className="App">
       <Header />
@@ -49,7 +51,10 @@ function App() {
       likes={likes} 
       cambio = {()=>setSave(true)}
       retorn = {()=>setSave(false)}
-      />      
+      />
+      <div className='progress-bar'>
+        <div className='progress' style={{width: `${(scenes.length*100)/500}%`}}>{(scenes.length*500)/500}%</div>
+        </div>   
       <ContentHistory>
         {
         !save?
@@ -103,13 +108,7 @@ function App() {
         }
         </div>
       </div>
-      {/* <Pages
-        prev={paginas.prev}
-        next={paginas.next}
-        avanzar={() => avanzar()}
-        devolber={() => devolber()}
-      /> */}
-
+     
     </div >
   );
 }
