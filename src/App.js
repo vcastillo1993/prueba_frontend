@@ -42,6 +42,19 @@ function App() {
     localStorage.setItem('savedScenes', JSON.stringify(scenesToSave))
   }
 
+  const delet = (id) =>{
+    const deleteScene = characters.findIndex(charact => charact.id === id);
+    const newCaracters = [...characters]
+    newCaracters.splice(deleteScene, 1)
+    setCharacters(newCaracters);
+  }
+
+  const deletsave = (id) =>{
+    const deleteScene = scenes.findIndex(charact => charact.id === id);
+    const newCaracters = [...scenes]
+    newCaracters.splice(deleteScene, 1)
+    setScenes(newCaracters);
+  }
 
 
   return (
@@ -66,6 +79,7 @@ function App() {
               species={personaje.species}
               image={personaje.image}
               like={() => setLikes(likes + 1)}
+              eliminar={()=>delet(personaje.id)}
               savescene={() => addscenes(personaje.id, saveOnLocalStorage)}
               save = {save}
             />
@@ -82,6 +96,7 @@ function App() {
               species={personaje.species}
               image={personaje.image}
               like={() => setLikes(likes + 1)}
+              eliminar={()=>deletsave(personaje.id)}
               /* savescene={() => addscenes(personaje.id, saveOnLocalStorage)} */
               save = {save}
             />

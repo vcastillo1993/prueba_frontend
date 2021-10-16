@@ -10,7 +10,7 @@ const Historias = (props) => {
         <h1>Estado del personage: {props.status}</h1>
         <h1>Especie del personage: {props.species}</h1>
         <div className="reacciones">
-          <span>eliminar</span>
+          <span onClick ={props.eliminar}>eliminar</span>
           {
           !props.save === true ? (            
             <span onClick={props.savescene}>guardar</span>
