@@ -13,7 +13,7 @@ const Historias = (props) => {
           <span onClick ={props.eliminar}>eliminar</span>
           {
           !props.save === true ? (            
-            <span onClick={props.savescene}>guardar</span>
+            <span onClick={props.addscenes}>guardar</span>
           ) :
            null
           }
